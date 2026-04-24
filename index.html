@@ -8,12 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
+
 <nav class="navbar">
     <div class="container nav-wrapper">
         <div class="logo">
-            <img src="assets/images/vetalis-logo.png" alt="Vetalis Logo">
+            <img src="assets/images/vetalis-logo.png" alt="Vetalis Logo" onerror="this.src=''; this.alt='Vetalis'">
         </div>
         <ul class="nav-links">
             <li><a href="#inicio" data-i18n="nav_home">Inicio</a></li>
@@ -40,11 +42,129 @@
                 <button class="btn-primary" data-i18n="btn_try">→ Probar gratis</button>
                 <button class="btn-secondary" data-i18n="btn_demo">Ver demo</button>
             </div>
+            <div class="hero-features">
+                <span><i class="icon text-primary" data-lucide="check-circle"></i> <span data-i18n="feat_install">Sin instalación</span></span>
+                <span><i class="icon text-primary" data-lucide="monitor"></i> <span data-i18n="feat_cloud">100% en la nube</span></span>
+                <span><i class="icon text-primary" data-lucide="award"></i> <span data-i18n="feat_support">Soporte incluido</span></span>
+            </div>
         </div>
         <div class="hero-img">
             <img src="assets/images/hero.png" alt="Vetalis App">
         </div>
     </div>
 </header>
+
+<section id="como-funciona" class="how">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="subtitle" data-i18n="flow_badge">FLUJO SIMPLE Y EFICIENTE</span>
+            <h2 data-i18n="flow_title">Todo lo que necesitas en un solo sistema</h2>
+            <p class="text-muted" data-i18n="flow_desc">Diseñado para veterinarios que buscan optimizar su tiempo y mejorar la atención.</p>
+        </div>
+
+        <div class="feature-banner fade-in">
+            <div class="fb-content">
+                <h2 data-i18n="exp_title">Una experiencia continua.</h2>
+                <p data-i18n="exp_desc">Simplificando el trabajo veterinario con herramientas modernas, intuitivas y accesibles desde cualquier dispositivo.</p>
+                <button class="btn-primary" data-i18n="btn_learn">Aprender más</button>
+            </div>
+            <img src="assets/images/how-to-works.png" alt="Experiencia continua">
+        </div>
+
+        <div class="steps-container">
+            <div class="section-header fade-in" style="margin-top: 4rem;">
+                <h2 data-i18n="steps_title">Cuatro Simples Pasos</h2>
+                <p class="text-muted" data-i18n="steps_desc">Un flujo diseñado para que empieces a optimizar tu clínica desde el primer día.</p>
+            </div>
+
+            <div class="step-row fade-in">
+                <div class="step-text">
+                    <span class="step-num">1</span>
+                    <h3 data-i18n="step1_title">Registra pacientes fácilmente</h3>
+                    <p data-i18n="step1_desc">Crea fichas digitales completas de cada mascota en segundos.</p>
+                </div>
+                <div class="step-img"><img src="assets/images/step-1.png" alt="Paso 1"></div>
+            </div>
+
+            <div class="step-row right fade-in">
+                <div class="step-img"><img src="assets/images/step-2.png" alt="Paso 2"></div>
+                <div class="step-text">
+                    <h3 data-i18n="step2_title">Gestiona tus citas</h3>
+                    <p data-i18n="step2_desc">Organiza tu agenda con un calendario claro y sin errores.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <div class="section-header fade-in">
+            <h2 data-i18n="why_title">Por Qué Elegir Vetalis</h2>
+            <p class="text-muted" data-i18n="why_desc">Herramientas diseñadas específicamente para el trabajo veterinario diario.</p>
+        </div>
+        <div class="features-grid">
+            <div class="f-card fade-in">
+                <div class="f-circle"></div>
+                <h3 data-i18n="feat_card1_title">Historial clínico centralizado</h3>
+                <p data-i18n="feat_card1_desc">Toda la información médica en un solo lugar.</p>
+            </div>
+            <div class="f-card fade-in">
+                <div class="f-circle"></div>
+                <h3 data-i18n="feat_card2_title">Agenda inteligente</h3>
+                <p data-i18n="feat_card2_desc">Evita conflictos y mejora tu organización diaria.</p>
+            </div>
+            <div class="f-card fade-in">
+                <div class="f-circle"></div>
+                <h3 data-i18n="feat_card3_title">Alertas automáticas</h3>
+                <p data-i18n="feat_card3_desc">Nunca olvides una vacuna o tratamiento.</p>
+            </div>
+            <div class="f-card fade-in">
+                <div class="f-circle"></div>
+                <h3 data-i18n="feat_card4_title">Acceso en la nube</h3>
+                <p data-i18n="feat_card4_desc">Disponible desde cualquier dispositivo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="resultados" class="results">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="subtitle" data-i18n="res_badge">RESULTADOS REALES</span>
+            <h2 data-i18n="res_title">Clínicas que ya optimizan su trabajo</h2>
+            <p class="text-muted" data-i18n="res_desc">Descubre cómo Vetalis transforma la gestión veterinaria.</p>
+        </div>
+        <div class="cases-grid">
+            <div class="c-card fade-in">
+                <img src="assets/images/case2.png" alt="Productividad">
+                <div class="c-body">
+                    <span class="c-badge" data-i18n="res_card1_badge">PRODUCTIVIDAD</span>
+                    <h4 data-i18n="res_card1_title">Optimización de agenda</h4>
+                    <p data-i18n="res_card1_desc">Eliminación de citas duplicadas y mejor organización.</p>
+                    <a href="#" class="c-link" data-i18n="res_link">Leer Caso →</a>
+                </div>
+            </div>
+            <div class="c-card fade-in">
+                <img src="assets/images/case3.png" alt="Atención Médica">
+                <div class="c-body">
+                    <span class="c-badge" data-i18n="res_card2_badge">ATENCIÓN MÉDICA</span>
+                    <h4 data-i18n="res_card2_title">Mejora en consultas</h4>
+                    <p data-i18n="res_card2_desc">Acceso rápido al historial clínico.</p>
+                    <a href="#" class="c-link" data-i18n="res_link">Leer Caso →</a>
+                </div>
+            </div>
+            <div class="c-card fade-in">
+                <img src="assets/images/exito.png" alt="Rentabilidad">
+                <div class="c-body">
+                    <span class="c-badge" data-i18n="res_card3_badge">RENTABILIDAD</span>
+                    <h4 data-i18n="res_card3_title">Control financiero</h4>
+                    <p data-i18n="res_card3_desc">Reducción de pérdidas por errores administrativos.</p>
+                    <a href="#" class="c-link" data-i18n="res_link">Leer Caso →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 </body>
 </html>
