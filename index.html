@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<script src="main.js"></script>
 <body>
 
 <nav class="navbar">
@@ -167,30 +166,63 @@
         </div>
     </div>
 </section>
+
 <section id="planes" class="pricing">
     <div class="container">
         <div class="section-header fade-in">
-            <span class="subtitle">PLANES FLEXIBLES</span>
-            <h2>Elige el plan ideal</h2>
+            <span class="subtitle" data-i18n="plan_badge">PLANES FLEXIBLES</span>
+            <h2 data-i18n="plan_title">Elige el plan ideal para tu clínica</h2>
+            <p class="text-muted" data-i18n="plan_desc">Escala tu negocio con herramientas profesionales.</p>
             <div class="price-toggle">
-                <button class="tgl-btn active" id="btn-monthly">Mensual</button>
-                <button class="tgl-btn" id="btn-annual">Anual <span class="disc">-20%</span></button>
+                <button class="tgl-btn active" id="btn-monthly" data-i18n="plan_monthly">Mensual</button>
+                <button class="tgl-btn" id="btn-annual"><span data-i18n="plan_annual">Anual</span> <span class="disc">-20%</span></button>
             </div>
         </div>
+
         <div class="pricing-grid">
             <div class="p-card fade-in">
                 <div class="p-circle"></div>
-                <h3>Básico</h3>
-                <div class="p-price">Gratis</div>
-                <div class="p-list centered"><p>Gestión básica</p></div>
+                <h3 data-i18n="plan1_name">Básico</h3>
+                <p class="p-desc" data-i18n="plan1_desc">Ideal para veterinarios independientes</p>
+                <div class="p-price" data-i18n="plan1_price">Gratis</div>
+                <div class="p-list centered">
+                    <p data-i18n="plan1_f1">Gestión de pacientes</p>
+                    <p data-i18n="plan1_f2">Agenda básica</p>
+                    <p data-i18n="plan1_f3">Historial clínico</p>
+                </div>
+                <button class="btn-dark w-100" data-i18n="btn_start">Empezar</button>
             </div>
+
             <div class="p-card popular fade-in">
-                <div class="pop-tag">Más Popular</div>
+                <div class="pop-tag" data-i18n="plan_pop">Más Popular</div>
                 <div class="p-circle-blue"></div>
-                <h3>Profesional</h3>
-                <div class="p-price">$<span id="price-prof">29</span><small class="per-period">/ mes</small></div>
+                <h3 data-i18n="plan2_name">Profesional</h3>
+                <p class="p-desc" data-i18n="plan2_desc">Para clínicas en crecimiento</p>
+                <div class="p-price">$<span id="price-prof">29</span><small class="per-period" data-i18n="per_month">/ mes</small></div>
                 <p class="savings hidden" id="save-prof">Ahorra $69.60</p>
-                <div class="p-list centered"><p><strong>Todo incluido</strong></p></div>
+                <div class="p-list centered">
+                    <p><strong data-i18n="plan2_f1">Todo lo del plan básico</strong></p>
+                    <p><strong data-i18n="plan2_f2">Alertas automáticas</strong></p>
+                    <p data-i18n="plan2_f3">Reportes</p>
+                    <p data-i18n="plan2_f4">Multiusuario</p>
+                </div>
+                <button class="btn-primary w-100 mt-auto" data-i18n="btn_try_now">Probar ahora</button>
+            </div>
+
+            <div class="p-card fade-in">
+                <div class="p-circle"></div>
+                <h3 data-i18n="plan3_name">Premium</h3>
+                <p class="p-desc" data-i18n="plan3_desc">Para clínicas avanzadas</p>
+                <div class="p-price">$<span id="price-prem">79</span><small class="per-period" data-i18n="per_month">/ mes</small></div>
+                <p class="savings hidden" id="save-prem">Ahorra $189.60</p>
+                <div class="p-list centered">
+                    <p><strong data-i18n="plan3_f1">Todo lo anterior</strong></p>
+                    <p><strong data-i18n="plan3_f2">Inventario</strong></p>
+                    <p><strong data-i18n="plan3_f3">Facturación</strong></p>
+                    <p data-i18n="plan3_f4">Soporte prioritario</p>
+                    <p data-i18n="plan3_f5">Integraciones</p>
+                </div>
+                <button class="btn-dark w-100 mt-auto" data-i18n="btn_choose">Elegir plan</button>
             </div>
         </div>
     </div>
@@ -198,23 +230,90 @@
 
 <section id="contacto" class="contact">
     <div class="container">
+        <div class="section-header fade-in">
+            <span class="subtitle" data-i18n="contact_badge">CONTÁCTANOS</span>
+            <h2 data-i18n="contact_title">Estamos para ayudarte</h2>
+            <p class="text-muted" data-i18n="contact_desc">Resolvemos tus dudas y te ayudamos a empezar.</p>
+        </div>
         <div class="contact-flex">
             <div class="contact-form c-card fade-in">
-                <h3>Envíanos un mensaje</h3>
-                <div class="input-group"><input type="text" placeholder="Tu Nombre"></div>
-                <button class="btn-primary w-100">Enviar</button>
+                <h3 data-i18n="form_title">Envíanos un mensaje</h3>
+                <div class="input-group">
+                    <label data-i18n="form_name">Tu Nombre</label>
+                    <input type="text" placeholder="Tu Nombre">
+                </div>
+                <div class="input-group">
+                    <label data-i18n="form_email">Correo Electrónico</label>
+                    <input type="email" placeholder="Correo Electrónico">
+                </div>
+                <div class="input-group">
+                    <label data-i18n="form_msg">Tu Mensaje</label>
+                    <textarea placeholder="Tu Mensaje" rows="4"></textarea>
+                </div>
+                <button class="btn-primary w-100" data-i18n="form_btn">Enviar Mensaje</button>
             </div>
             <div class="contact-info fade-in">
                 <img src="assets/images/contact.png" alt="Contacto">
                 <div class="info-content c-card">
-                    <div class="info-item"><div class="f-circle-small"></div><p>Lima, Perú</p></div>
+                    <h3 data-i18n="info_title">Información de Contacto</h3>
+                    <div class="info-item">
+                        <div class="f-circle-small"></div>
+                        <p><strong data-i18n="info_loc">Nuestra Ubicación</strong><br>Lima, Perú</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="f-circle-small"></div>
+                        <p><strong data-i18n="info_mail">Envíanos un correo</strong><br>contacto@vetalis.com</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="f-circle-small"></div>
+                        <p><strong data-i18n="info_phone">Llámanos</strong><br>+51 999 999 999</p>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="faq fade-in">
-            <h2 class="text-center faq-title">Preguntas Frecuentes</h2>
+            <h2 class="text-center faq-title" data-i18n="faq_title">Preguntas Frecuentes</h2>
             <div class="faq-grid">
-                <div class="faq-card"><div class="faq-q">¿Cómo empiezo? <i data-lucide="plus"></i></div><p class="faq-a">Regístrate gratis.</p></div>
+                <div class="faq-card">
+                    <div class="faq-q"><span data-i18n="faq1_q">¿Cómo empiezo?</span> <i data-lucide="plus"></i></div>
+                    <p class="faq-a" data-i18n="faq1_a">Regístrate gratis y comienza a usar Vetalis de inmediato.</p>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-q"><span data-i18n="faq2_q">¿Ofrecen soporte?</span> <i data-lucide="plus"></i></div>
+                    <p class="faq-a" data-i18n="faq2_a">Sí, soporte incluido en todos los planes.</p>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-q"><span data-i18n="faq3_q">¿Es seguro?</span> <i data-lucide="plus"></i></div>
+                    <p class="faq-a" data-i18n="faq3_a">Usamos estándares de seguridad para proteger tu información.</p>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-q"><span data-i18n="faq4_q">¿Puedo cancelar?</span> <i data-lucide="plus"></i></div>
+                    <p class="faq-a" data-i18n="faq4_a">Sí, sin compromiso ni penalidades.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="nosotros" class="about">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="subtitle" data-i18n="about_badge">NUESTRA MISIÓN</span>
+            <h2 data-i18n="about_title">Transformando la gestión veterinaria</h2>
+            <p class="text-muted" data-i18n="about_desc">Innovación al servicio del cuidado animal.</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="c-card fade-in">
+                <h3 data-i18n="about_prod">Sobre el Producto</h3>
+                <p class="text-muted" data-i18n="about_prod_desc">Vetalis es una plataforma integral para clínicas veterinarias.</p>
+                <div class="video-ph"><i data-lucide="youtube" style="color:red; width: 48px; height: 48px;"></i></div>
+            </div>
+            <div class="c-card fade-in">
+                <h3 data-i18n="about_team">Sobre el Equipo</h3>
+                <p class="text-muted" data-i18n="about_team_desc">Equipo enfocado en tecnología y salud animal.</p>
+                <div class="video-ph"><i data-lucide="youtube" style="color:red; width: 48px; height: 48px;"></i></div>
             </div>
         </div>
     </div>
@@ -242,5 +341,7 @@
         </div>
     </div>
 </footer>
+
+<script src="main.js"></script>
 </body>
 </html>
