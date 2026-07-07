@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contact_badge: "CONTÁCTANOS", contact_title: "Estamos para ayudarte", contact_desc: "Resolvemos tus dudas y te ayudamos a empezar.",
             form_title: "Envíanos un mensaje", form_name: "Tu Nombre", form_email: "Correo Electrónico", form_msg: "Tu Mensaje", form_btn: "Enviar Mensaje",
             info_title: "Información de Contacto", info_loc: "Nuestra Ubicación", info_mail: "Envíanos un correo", info_phone: "Llámanos",
-            faq_title: "Preguntas Frecuentes", faq1_q: "¿Cómo empiezo?", faq1_a: "Regístrate gratis y comienza a usar Vetalis de inmediato.", faq2_q: "¿Ofrecen soporte?", faq2_a: "Sí, soporte incluido en todos los planes.", faq3_q: "¿Es seguro?", faq3_a: "Usamos estándares de seguridad para proteger tu información.", faq4_q: "¿Puedo cancelar?", faq4_a: "Sí, sin compromiso ni penalidades.",
+            faq_title: "Preguntas Frecuentes", faq1_q: "¿Cómo empiezo?", faq1_a: "Regístrate gratis y comienza a usar Vetalis de inmediato.", faq2_q: "¿Ofrecen soporte?", faq2_a: "Sí, soporte incluido en todos los planes.", faq3_q: "Is it safe?", faq3_a: "Usamos estándares de seguridad para proteger tu información.", faq4_q: "¿Puedo cancelar?", faq4_a: "Sí, sin compromiso ni penalidades.",
             about_badge: "NUESTRA MISIÓN", about_title: "Transformando la gestión veterinaria", about_desc: "Innovación al servicio del cuidado animal.",
             about_prod: "Sobre el Producto", about_prod_desc: "Vetalis es una plataforma integral para clínicas veterinarias.", about_team: "Sobre el Equipo", about_team_desc: "Equipo enfocado en tecnología y salud animal.",
             footer_desc: "Vetalis simplifica la gestión veterinaria con herramientas digitales intuitivas para que los profesionales se enfoquen en el cuidado animal."
@@ -160,4 +160,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 6. Lógica de Envío de Formulario
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Evita que la página se recargue
+            alert('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo.');
+            contactForm.reset(); // Limpia los campos
+        });
+    }
 });
